@@ -31,12 +31,12 @@ class GUI():
 
             lower = np.array([hue_min, saturation_min, value_min])
             upper = np.array([hue_max, saturation_max, value_max])
-            erode_element = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-            dilate_element = cv2.getStructuringElement(cv2.MORPH_RECT, (8, 8))
+            # erode_element = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+            # dilate_element = cv2.getStructuringElement(cv2.MORPH_RECT, (8, 8))
 
             mask = cv2.inRange(hsvImage, lower, upper)
-            mask = cv2.erode(mask, erode_element)
-            mask = cv2.dilate(mask, dilate_element)
+            # mask = cv2.erode(mask, erode_element)
+            # mask = cv2.dilate(mask, dilate_element)
 
             cv2.imshow("Original", originalImage)
             cv2.imshow("Mask", mask)
